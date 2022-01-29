@@ -28,7 +28,9 @@ public class RegisterDao {
             session.getTransaction().rollback();
             return false;
         } finally {
-            if (session != null) session.close();
+            if (session != null){
+                session.close();
+            }
         }
         return true;
     }

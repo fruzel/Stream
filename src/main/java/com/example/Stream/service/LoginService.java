@@ -12,6 +12,7 @@ public class LoginService {
     @Autowired
     private LoginDao loginDao;
 
+    // Returns the users firstName if exists.
     public String verifyLogin(String userId, String password) throws IOException {
         password = Utl.encryptPassword(userId, password);
         return loginDao.verifyLogin(userId, password);

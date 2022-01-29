@@ -6,9 +6,8 @@ import java.io.IOException;
 
 public class Utl {
 
-    // Help encrypt the user password before save to the database
+    // Encrypt entries save in the DB
     public static String encryptPassword(String userId, String password) throws IOException {
         return DigestUtils.md5Hex(userId + DigestUtils.md5Hex(password)).toLowerCase();
-
     }
 }

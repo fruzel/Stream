@@ -29,6 +29,7 @@ public class GameController {
             } else {
                 response.getWriter().print(new ObjectMapper().writeValueAsString(gameService.topGames(0)));
             }
+
         } catch (TwitchException e) {
             throw new ServletException(e);
         }
